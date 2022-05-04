@@ -9,7 +9,7 @@ public interface JpaConst {
 
 
     // resistence-unit名
-    String PERSIETENCE_UNIT_NAME = "daily_report_system";
+    String PERSISTENCE_UNIT_NAME = "daily_report_system";
 
 
     // データ取得件数最大値
