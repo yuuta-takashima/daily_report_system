@@ -17,7 +17,7 @@ public interface JpaConst {
 
 
     // 従業員テーブル
-    String TABLW_EMP = "employees";  // テーブル名
+    String TABLE_EMP = "employees";  // テーブル名
     // 従業員テーブルカラム
     String EMP_COL_ID = "id"; // id
     String EMP_COL_CODE ="code"; //社員番号

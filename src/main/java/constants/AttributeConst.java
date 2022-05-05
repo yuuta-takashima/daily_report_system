@@ -82,7 +82,7 @@ public enum AttributeConst {
     }
 
 
-    public Integer getIntegetValue() {
+    public Integer getIntegerValue() {
         return this.i;
     }
 }
