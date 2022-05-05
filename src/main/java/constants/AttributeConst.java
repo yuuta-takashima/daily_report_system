@@ -77,12 +77,12 @@ public enum AttributeConst {
     }
 
 
-    public String gerValue() {
+    public String getValue() {
         return this.text;
     }
 
 
-    public Integer getIntegerValue() {
+    public Integer getIntegetValue() {
         return this.i;
     }
 }
