@@ -22,7 +22,7 @@ public enum MessageConst {
 
 
     // バリテーション
-    E_NONOME("氏名を入力してください。"),
+    E_NONAME("氏名を入力してください。"),
     E_NOPASSWORD("パスワードを入力してください。"),
     E_NOEMP_CODE("社員番号を入力してください。"),
     E_EMP_CODE_EXIST("入力された社員番号の情報はすでに存在しています。"),
