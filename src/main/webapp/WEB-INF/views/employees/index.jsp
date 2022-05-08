@@ -29,7 +29,7 @@
                 <c:forEach var="employee" items="${employees}" varStatus="status">
                     <tr class="row${satus.count % 2}">
                         <td><c:out value="${employee.code}" /></td>
-                        <td><c:out value="${emplyee.name}" /></td>
+                        <td><c:out value="${employee.name}" /></td>
                         <td>
                             <c:choose>
                                 <c:when test="${employee.deleteFlag == AttributeConst.DEL_FLAG_TRUE.getIntegerValue()}">
