@@ -72,7 +72,7 @@ public abstract class ActionBase {
             commandMethod.invoke(this, new Object[0]); //メソッドに渡す引数はなし
 
 
-        }catch(NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException
+        } catch (NoSuchMethodException | SecurityException | IllegalAccessException | IllegalArgumentException
                 | InvocationTargetException | NullPointerException e) {
 
             // 発生した例外をコンソールに表示
