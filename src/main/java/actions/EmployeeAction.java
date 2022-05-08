@@ -23,6 +23,23 @@ public class EmployeeAction extends ActionBase {
 
 
     /**
+     * 新規登録画面を表示する
+     * @throws ServletException
+     * @throws IOException
+     */
+    public void entryNew() throws ServletException, IOException {
+
+
+        putRequestScope(AttributeConst.TOKEN, getTokenId()); // CSRF対策用トークン
+        putRequestScope(AttributeConst.EMPLOYEE, new EmployeeView()); // 空の従業員インスタンス
+
+
+        // 新規登録画面を表示
+        forward(ForwardConst.FW_EMP_NEW);
+    }
+
+
+    /**
      * メソッドを実行する
      */
     @Override
@@ -60,6 +77,9 @@ public class EmployeeAction extends ActionBase {
         putRequestScope(AttributeConst.EMP_COUNT, employeeCount); // 全ての従業員データの件数
         putRequestScope(AttributeConst.PAGE, page); // ページ数
         putRequestScope(AttributeConst.MAX_ROW, JpaConst.ROW_PER_PAGE); // 1ページに表示するレコードの数
+
+
+
 
 
         // セッションにフラッシュメッセージが設定されている場合はリクエストスコープに移し替え、セッションからは削除する
