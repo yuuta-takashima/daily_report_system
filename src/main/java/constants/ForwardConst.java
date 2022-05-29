@@ -31,6 +31,7 @@ public enum ForwardConst {
     CMD_EDIT("edit"),
     CMD_UPDATE("update"),
     CMD_DESTROY("destroy"),
+    CMD_LIKE_COUNT("like_count"),
 
 
     // jsp

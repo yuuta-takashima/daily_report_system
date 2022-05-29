@@ -108,8 +108,8 @@ public class AuthAction extends ActionBase {
 
     /**
      * ログイン画面を表示する
-     * @throws  ServletException
-     * @throws IOException
+//     * @throws  ServletException
+//     * @throws IOException
      */
     public void showLogin() throws ServletException, IOException {
 

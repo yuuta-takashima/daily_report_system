@@ -134,7 +134,8 @@ public class ReportAction extends ActionBase {
                     getRequestParam(AttributeConst.REP_TITLE),
                     getRequestParam(AttributeConst.REP_CONTENT),
                     null,
-                    null);
+                    null,
+                    0);
 
 
             // 日報情報登録
@@ -229,7 +230,7 @@ public class ReportAction extends ActionBase {
 
             // 編集画面を表示
             forward(ForwardConst.FW_REP_EDIT);
-        }
+       }
     }
 
 
@@ -250,6 +251,7 @@ public class ReportAction extends ActionBase {
             rv.setReportDate(toLocalDate(getRequestParam(AttributeConst.REP_DATE)));
             rv.setTitle(getRequestParam(AttributeConst.REP_TITLE));
             rv.setContent(getRequestParam(AttributeConst.REP_CONTENT));
+
 
             // 日報データを更新する
             List<String> errors = service.update(rv);
@@ -275,4 +277,40 @@ public class ReportAction extends ActionBase {
             }
         }
     }
-}
+
+        /**
+         * いいね機能の追加
+         * @throws ServletException
+         * @throws IOException
+         */
+        public void like_count() throws ServletException, IOException {
+
+            // idを条件に日報データを取得する
+            ReportView rv = service.findOne(toNumber(getRequestParam(AttributeConst.REP_ID)));
+
+
+            //rvl.setLikeCount(Integer.parseInt(JpaConst.REP_COL_LIKE_COUNT));
+
+
+
+            int i = rv.getLikeCount() + 1;
+
+            rv.setLikeCount(i);
+
+            List<String> errors= service.update(rv);
+
+
+            putSessionScope(AttributeConst.FLUSH, MessageConst.I_LIKE_COUNT.getMessage());
+
+            redirect(ForwardConst.ACT_REP, ForwardConst.CMD_INDEX);
+    }
+
+
+
+        }
+
+
+
+
+
+
